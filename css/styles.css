@@ -1,0 +1,624 @@
+/*=============================================*\
+                    VARIABLES
+\*=============================================*/
+/*=============================================*\
+                     MIXINS
+\*=============================================*/
+/*=============================================*\
+                ADD FONTS TO PROJECT
+\*=============================================*/
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/montserrat-v14-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/montserrat-v14-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v14-latin-regular.woff2") format("woff2"), url("../fonts/montserrat-v14-latin-regular.woff") format("woff"), url("../fonts/montserrat-v14-latin-regular.ttf") format("truetype"), url("../fonts/montserrat-v14-latin-regular.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/montserrat-v14-latin-500.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/montserrat-v14-latin-500.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v14-latin-500.woff2") format("woff2"), url("../fonts/montserrat-v14-latin-500.woff") format("woff"), url("../fonts/montserrat-v14-latin-500.ttf") format("truetype"), url("../fonts/montserrat-v14-latin-500.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/montserrat-v14-latin-600.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/montserrat-v14-latin-600.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v14-latin-600.woff2") format("woff2"), url("../fonts/montserrat-v14-latin-600.woff") format("woff"), url("../fonts/montserrat-v14-latin-600.ttf") format("truetype"), url("../fonts/montserrat-v14-latin-600.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/montserrat-v14-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/montserrat-v14-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v14-latin-700.woff2") format("woff2"), url("../fonts/montserrat-v14-latin-700.woff") format("woff"), url("../fonts/montserrat-v14-latin-700.ttf") format("truetype"), url("../fonts/montserrat-v14-latin-700.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+/*=============================================*\
+                 GENERAL STYLES
+\*=============================================*/
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+* {
+  color: #484848;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+a {
+  color: #484848 !important;
+  text-decoration: none !important;
+}
+
+.container {
+  max-width: 1140px;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+input:focus, button:focus {
+  outline: none;
+}
+
+/*=============================================*\
+                SECTION INTRO STYLES
+\*=============================================*/
+.page-intro {
+  position: relative;
+  min-height: 680px;
+  background-image: url("../img/bg-header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.page-header * {
+  color: #ffffff !important;
+}
+
+.site-logo {
+  font-size: 24px;
+  font-weight: 700;
+  transform: translateY(-2px);
+}
+
+.page-nav {
+  flex-grow: 1;
+}
+
+.page-nav__ul {
+  display: flex;
+  align-items: center;
+}
+
+.page-nav__link {
+  transition: 0.4s;
+}
+.page-nav__link:hover {
+  color: #ff4b64 !important;
+}
+
+.login {
+  margin-left: auto;
+}
+.login .page-nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  border: 1.33px solid #ffffff;
+  border-radius: 5px;
+}
+.login .page-nav__link:hover {
+  background-color: #ff4b64;
+  border-color: #ff4b64;
+  color: #ffffff !important;
+}
+
+.page-header .container {
+  padding-top: 36px;
+}
+
+.page-nav__li:not(:last-child) {
+  margin-left: 30px;
+}
+
+.page-intro__title {
+  padding-top: 210px;
+  text-align: center;
+}
+.page-intro__title h1 {
+  font-size: 72px;
+  line-height: 84px;
+  font-weight: 500;
+  letter-spacing: 1.8px;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.page-intro__title p {
+  font-size: 30px;
+  line-height: 84px;
+  color: #ffffff;
+  letter-spacing: 0.75px;
+}
+
+.page-intro__search {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.page-intro__search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-intro__search-input {
+  height: 55px;
+  padding: 13.5px 30px;
+  border: 1px solid #e6e6e6;
+}
+.page-intro__search-input:first-child {
+  width: 335px;
+}
+.page-intro__search-input:nth-child(2) {
+  border-left: none;
+  border-right: none;
+  width: 335px;
+}
+.page-intro__search-input:nth-child(3) {
+  width: 185px;
+}
+.page-intro__search-input::placeholder {
+  font-size: 16px;
+  line-height: 26px;
+  color: #818181;
+}
+
+.page-intro__search-button {
+  height: 55px;
+  padding: 13.5px 30px;
+  border: 1px solid #ff4b64;
+  background-color: #ff4b64;
+  color: #ffffff;
+}
+.page-intro__search-button:hover {
+  background-color: #ff5a71;
+}
+
+.fas.fa-bars {
+  font-size: 20px;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+/*=============================================*\
+                STYLES SECTION FLIGHTS
+\*=============================================*/
+.section {
+  padding-top: 80px;
+}
+
+.section-header {
+  margin-bottom: 60px;
+}
+
+.section-flights {
+  padding-top: 100px;
+}
+.section-flights .section-header {
+  margin-bottom: 30px;
+}
+
+.section-header__title {
+  font-size: 30px;
+  line-height: 26px;
+}
+
+.section-nav__ul {
+  display: flex;
+  align-items: center;
+}
+
+.section-nav__li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.section-nav__link:hover {
+  color: #ff4b64 !important;
+}
+
+th {
+  font-weight: 500;
+}
+
+th, td {
+  padding: 26px 0 !important;
+}
+
+tr {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+td:first-child {
+  display: flex;
+  align-items: center;
+}
+
+td:last-child {
+  width: 120px;
+}
+
+.airline-logo {
+  margin-right: 20px;
+}
+
+.info {
+  width: max-content;
+  text-align: center;
+}
+
+.info-secondary {
+  color: #9a9a9a;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  border: 1px solid #ff4b64;
+  border-radius: 5px;
+  color: #ff4b64;
+  transition: 0.3s;
+}
+.price:hover {
+  background-color: #ff4b64;
+  color: #ffffff;
+}
+
+.section-footer {
+  text-align: right;
+  padding-top: 20px;
+}
+.section-footer .see-all:hover {
+  color: #ff4b64 !important;
+}
+
+/*=============================================*\
+                SECTION HOTELS
+\*=============================================*/
+.card, .card-header, .card-body {
+  border: none;
+  border-radius: 0 !important;
+  background-color: #ffffff;
+  padding: 0;
+}
+
+.card-header img {
+  width: 100%;
+}
+
+.card-body {
+  padding: 25px 15px;
+  border: 2px solid #e6e6e6;
+  border-top: none;
+}
+.card-body h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.distance-wifi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.distance-wifi div {
+  color: #9a9a9a !important;
+}
+
+.section-hotels .col-12 {
+  margin-bottom: 30px;
+}
+
+/*=============================================*\
+            SECTION ATTRACTIONS STYLES
+\*=============================================*/
+.wrapper {
+  position: relative;
+  margin-bottom: 30px;
+}
+.wrapper .about {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+.wrapper img {
+  width: 100%;
+}
+
+/*=============================================*\
+                SECTIONS TRIPS STYLES
+\*=============================================*/
+.section-trips .row {
+  margin-bottom: 30px;
+}
+.section-trips img {
+  width: 100%;
+}
+.section-trips .col-md-4 {
+  padding-right: 0;
+}
+.section-trips .col-md-8 {
+  padding: 20px 15px 20px 30px;
+  border: 1px solid #e6e6e6;
+}
+
+.trips-title {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.trips-text {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+/*=============================================*\
+                PAGE FOOTER STYLES
+\*=============================================*/
+.page-footer {
+  padding: 80px 0 135px;
+}
+
+.footer-nav__header {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 55px;
+}
+
+.footer-nav__li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.footer-nav__link:hover {
+  color: #ff4b64 !important;
+}
+
+.email {
+  color: #ff4b64 !important;
+}
+
+/*=============================================*\
+                MEDIA QUERIES
+\*=============================================*/
+@media only screen and (max-width: 1000px) {
+  .page-intro__title {
+    padding-top: 72px;
+  }
+
+  .page-intro__search {
+    top: 70% !important;
+    width: 100%;
+  }
+
+  .page-intro__search-form {
+    flex-wrap: wrap;
+  }
+
+  .page-intro__search-input, .page-intro__search-button {
+    width: 50% !important;
+  }
+
+  .page-intro__search-input:nth-child(2) {
+    border: 1px solid #e6e6e6;
+  }
+
+  .page-intro__title p {
+    line-height: 1 !important;
+  }
+
+  .section-flights {
+    padding-top: 80px;
+  }
+
+  .section-header__title, .section-nav {
+    width: 100%;
+  }
+
+  .section-header__title {
+    margin-bottom: 15px;
+  }
+
+  .section-nav__ul {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .section-nav__li {
+    flex-shrink: 0;
+    margin: 0 15px 0 0 !important;
+  }
+}
+@media only screen and (max-width: 800px) {
+  thead {
+    display: none;
+  }
+
+  td {
+    position: relative;
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100% !important;
+    border-bottom: 1px solid #e6e6e6 !important;
+  }
+
+  td::before {
+    content: attr(data-browse);
+    position: absolute;
+    left: 0;
+    font-weight: 500;
+  }
+
+  .info {
+    text-align: right;
+  }
+
+  tr {
+    display: block;
+    border-bottom-width: 3px;
+  }
+}
+@media only screen and (max-width: 740px) {
+  .page-nav {
+    position: fixed;
+    top: 98px;
+    width: 100%;
+    height: 100vh;
+    left: -100%;
+    background-color: #212538;
+    transition: 0.6s;
+    z-index: 99999;
+  }
+
+  .page-nav__ul {
+    flex-wrap: wrap;
+    padding: 0 15px;
+  }
+
+  .page-nav__li {
+    width: 50%;
+    border: 3px solid #ffffff;
+    margin: 0 !important;
+  }
+
+  .page-nav__link {
+    display: block;
+    padding: 30px 15px;
+  }
+
+  .login a {
+    display: block;
+    border: none !important;
+    width: 100% !important;
+    height: auto !important;
+    justify-content: flex-start !important;
+  }
+
+  .flex-container {
+    justify-content: space-between;
+  }
+
+  .fas.fa-bars {
+    padding-top: 8px;
+    display: block;
+  }
+
+  #check:checked ~ .page-nav {
+    left: 0;
+  }
+}
+@media only screen and (max-width: 581px) {
+  .page-intro__search {
+    top: 74% !important;
+  }
+
+  .page-intro__search-input, .page-intro__search-button {
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .page-intro__title h1 {
+    font-size: 60px;
+  }
+}
+@media only screen and (max-width: 475px) {
+  .page-intro__title h1 {
+    font-size: 55px;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .page-intro__title h1 {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 406px) {
+  .page-intro__title h1 {
+    font-size: 45px;
+  }
+
+  .page-intro__search {
+    top: 75% !important;
+  }
+}
+@media only screen and (max-width: 371px) {
+  .page-intro__title h1 {
+    line-height: 1.2;
+  }
+
+  .page-intro__search {
+    top: 75% !important;
+  }
+}
+@media only screen and (max-width: 307px) {
+  .page-intro__search {
+    top: 81% !important;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .page-nav__li {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
